@@ -7,38 +7,39 @@
 
 makeCacheMatrix <- function(x = matrix()) {
 
-  # Setting an inverse as null
-  inv <- NULL
-  
-  
-  # Sets up the matrix
-  set <- function(matrix){
-    m <<- matrix
-    inv <<- NULL
-  }
-  
-  # Gets the matrix
-  get <- fucntion(){
-    # Returns the Matrix
-    m
-  }
-  
-  # Sets the inverse of the matrix
-  InverseSet <- function(Inverse){
-    inv <<- Inverse
-  }
-  
-  # Gets the inverse of matrix
-  InverseGet <- function(){
-    # Returns the inverse of the matrix
-    inv
-  }
-  
-  # List of the Method
-  list(set = set, get = get, 
-       InverseSet= InverseSet, 
-       InverseGet= InverseGet)
-  
+# Setting an inverse as null 
+invMatrix <- NULL
+
+
+# Sets up the matrix of values
+setMatrix <- function(y) {
+  x <<- y
+  invMatrix <<- NULL
+}
+
+# Gets the matrix
+getMatrix <- function() {
+  # Returns the Matrix
+  x       
+}
+
+
+# Sets the inverse of the matrix
+setInverse <- function(inverse) {
+  invMatrix <<- inverse 
+}
+
+# Gets the inverse of matrix
+getInverse <- function() {
+  # Returns the inverse of the matrix
+  invMatrix          
+}
+
+# Gets the value of the invertible matrix as a list
+list(setMatrix = setMatrix, 
+     getMatrix = getMatrix,
+     setInverse = setInverse, 
+     getInverse = getInverse)
 }
 
 
